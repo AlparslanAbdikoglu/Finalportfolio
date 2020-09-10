@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gif Maker</title>
+
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+
+	<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="default.css">
+
+
+	<style type="text/css">
+		.img-container{
+			max-width: 600px;
+		}
+
+		img{
+			width: 100%
+		}
+
+	</style>
+
+</head>
+<body>
+	<div class="nav-wrapper">
+
+		<!-- Link around dots-wrapper added after tutorial video -->
+		<a href="index.html">
+			<div class="dots-wrapper">
+				<div id="dot-1" class="browser-dot"></div>
+				<div id="dot-2" class="browser-dot"></div>
+				<div id="dot-3" class="browser-dot"></div>
+			</div>
+		</a>
+
+		<ul id="navigation">
+			<li><a href="index.html">Home</a></li>
+
+		</ul>
+	</div>
+
+	<div class="main-container">
+		<br>
+
+		<div class="img-container">
+			<img class="thumbnail" src="images/Gifmaker.gif">
+		</div>
+		
+		<h3>GIF</h3>
+
+		<p> Pure PYthon shortest gif function<br>
+			<br>import imageio
+                 import os
+       clip = os.path.abspath('Big Cat Jump.mp4')
+<br>
+<br> def gifMaker(inputPath, targetFormat):
+<br> outputPath = os.path.splitext(inputPath)[0] + targetFormat
+<br>print(f'converting {inputPath} \n to {outputPath}')
+	<br>
+	<br> reader = imageio.get_reader(inputPath)
+    <br>  fps = reader.get_meta_data()['fps']
+<br>
+<br>writer = imageio.get_writer(outputPath, fps=fps)
+	<br>
+    <br>for frames in reader:
+	<br> writer.append_data(frames)
+	<br>print(f'Frame {frames}')
+    
+	<br>writer.close()
+    <br>print('Done!')
+
+	<br>gifMaker(clip, '.gif')
+		<br>
+		<br>
+		</p>
+
+		<h5>Technologies:</h5>
+		<ul>
+			<li>- Python</li>
+		</ul>
+
+
+		<h5>Gif example</h5>
+		<div class="img-container">
+			<img class="thumbnail" src="images/excali.gif">
+		</div>
+
+		<h6>Example 2</h5>
+			<div class="img-container">
+			<img class="thumbnail" src="images/Zenitsu.gif">
+		</div>
+
+
+</body>
+</html>
