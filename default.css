@@ -510,13 +510,6 @@ h6 { font-size: 16px;}
 	text-align: center;
 	transform: translateX(-10%);
 	}
-	
-#precode{
-	background-color: rgb(0, 0, 0);
-	border: 1px solid rgb(255, 3, 3);
-	display: block;
-	padding: 20px;
-  }
 
 @media screen and (max-width: 1200px){
 	.main-container{
